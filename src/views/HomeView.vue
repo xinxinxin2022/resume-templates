@@ -11,26 +11,6 @@
       </div>
     </section>
 
-    <!-- Categories -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">{{ t('home.categoriesTitle') }}</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <router-link v-for="(info, slug) in categoryInfo" :key="slug" :to="`/category/${slug}`"
-            class="block p-6 rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all group">
-            <div class="text-4xl mb-3">
-              <span v-if="slug === 'Professional'"></span>
-              <span v-if="slug === 'Creative'">🎨</span>
-              <span v-if="slug === 'Modern'">⚡</span>
-              <span v-if="slug === 'Elegant'"></span>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600">{{ info.title }}</h3>
-            <p class="text-gray-600 text-sm">{{ info.description.substring(0, 100) }}...</p>
-          </router-link>
-        </div>
-      </div>
-    </section>
-
     <!-- Featured Templates -->
     <section class="py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4">
