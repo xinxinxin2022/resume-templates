@@ -100,8 +100,8 @@ function generateTemplates(): Template[] {
       pages: num % 3 === 0 ? 2 : 1,
       description: descList[descIndex],
       features: featList[descIndex],
-      preview: `${CDN_BASE}/(${num}).jpg`,
-      downloadUrl: `${CDN_BASE}/(${num}).${ext}`,
+      preview: `${CDN_BASE}/${num}.jpg`,
+      downloadUrl: `${CDN_BASE}/${num}.${ext}`,
     })
   }
 
