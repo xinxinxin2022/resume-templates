@@ -6,3 +6,5 @@ dist
 .DS_Store
 public/previews/
 public/word-files/
+scripts/upload_release.sh
+scripts/upload_release.py
