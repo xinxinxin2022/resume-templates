@@ -98,7 +98,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { templates, categoryInfo } from '../data/templates'
+import { templates } from '../data/templates'
 import TemplateCard from '../components/TemplateCard.vue'
 
 const { t } = useI18n()
