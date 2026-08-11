@@ -90,11 +90,6 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { FileText, Menu } from 'lucide-vue-next'
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const mobileMenu = ref(false)
-
-function toggleLang() {
-  locale.value = locale.value === 'en' ? 'zh' : 'en'
-  localStorage.setItem('locale', locale.value)
-}
 </script>
