@@ -31,7 +31,7 @@
             </li>
           </ul>
 
-          <button class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 mb-3">
+          <button @click="download" class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 mb-3 cursor-pointer">
             {{ t('detail.download') }}
           </button>
           <p class="text-sm text-gray-500 text-center">{{ t('detail.compatible') }}</p>
@@ -61,4 +61,10 @@ const { t } = useI18n()
 const route = useRoute()
 const template = computed(() => templates.find(t => t.id === Number(route.params.id)))
 const related = computed(() => templates.filter(t => t.category === template.value?.category && t.id !== template.value?.id).slice(0, 4))
+
+function download() {
+  if (template.value) {
+    window.open(template.value.downloadUrl, '_blank')
+  }
+}
 </script>
